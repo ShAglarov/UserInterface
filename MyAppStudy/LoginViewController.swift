@@ -7,11 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class LoginViewController: UIViewController {
+    
+    
+    @IBOutlet var uiButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        uiButton.layer.cornerRadius = 5
     }
 
 
