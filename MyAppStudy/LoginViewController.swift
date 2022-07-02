@@ -9,9 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
     @IBOutlet var uiButton: UIButton!
-    
     
     @IBOutlet var scrollView: UIScrollView!
     
@@ -24,6 +22,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         uiButton.layer.cornerRadius = 5
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
