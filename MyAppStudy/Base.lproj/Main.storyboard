@@ -105,6 +105,9 @@
                                             <constraint firstItem="KLO-d1-Ben" firstAttribute="top" secondItem="K5S-16-vKS" secondAttribute="top" constant="280" id="tUl-Zd-EQE"/>
                                             <constraint firstAttribute="width" constant="375" id="vbq-Ll-1eX"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jI6-Da-Y3P" appends="YES" id="KOF-zg-8DS"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -130,10 +133,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="scrollView" destination="MWv-id-ERi" id="i3t-Dy-txj"/>
                         <outlet property="uiButton" destination="2xb-dx-VZT" id="LGI-mE-TIJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jI6-Da-Y3P">
+                    <connections>
+                        <action selector="tapViewExitKeyboard:" destination="BYZ-38-t0r" id="dyr-bh-qcA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>

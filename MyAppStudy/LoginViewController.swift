@@ -12,6 +12,14 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var uiButton: UIButton!
     
+    
+    @IBOutlet var scrollView: UIScrollView!
+    
+    @IBAction func tapViewExitKeyboard(_ sender: Any) {
+        //view.resignFirstResponder()
+        scrollView.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
