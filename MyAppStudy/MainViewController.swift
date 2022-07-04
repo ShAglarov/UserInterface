@@ -17,13 +17,12 @@ class MainViewController: UIViewController {
     
  
     @IBAction func backMain(_ sender: UIButton) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backMainButton.layer.cornerRadius = 5
-        
         textLabelWelcomeUser?.text? += text ?? ""
     }
     

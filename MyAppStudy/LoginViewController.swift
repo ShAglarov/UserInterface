@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func tapEntryAccountButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "showVC", sender: self)
+       
     }
     
     @IBAction func tapViewExitKeyboard(_ sender: Any) {
