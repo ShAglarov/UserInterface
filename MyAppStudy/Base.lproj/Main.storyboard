@@ -66,7 +66,8 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Войти"/>
                                                         <connections>
-                                                            <segue destination="coQ-ll-lvh" kind="presentation" modalPresentationStyle="fullScreen" id="Xvc-eW-hjF"/>
+                                                            <action selector="tapEntryAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4x-0n-Kx2"/>
+                                                            <segue destination="coQ-ll-lvh" kind="presentation" identifier="showVC" modalPresentationStyle="fullScreen" id="Xvc-eW-hjF"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -90,8 +91,8 @@
                                                     <constraint firstAttribute="trailing" secondItem="eYV-nq-gDt" secondAttribute="trailing" constant="229" id="xCj-Zu-4ZY"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в iOS разработку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5B-TF-QfO">
-                                                <rect key="frame" x="8" y="39" width="351" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разработка iOS приложений" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5B-TF-QfO">
+                                                <rect key="frame" x="48" y="39" width="275" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -103,7 +104,7 @@
                                             <constraint firstAttribute="trailing" secondItem="KLO-d1-Ben" secondAttribute="trailing" constant="40" id="F1v-hP-loX"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c5B-TF-QfO" secondAttribute="trailing" constant="16" id="GMb-aR-I5G"/>
                                             <constraint firstItem="442-E8-qXb" firstAttribute="top" secondItem="c5B-TF-QfO" secondAttribute="bottom" constant="-80" id="Mgh-Lm-ZSZ"/>
-                                            <constraint firstItem="c5B-TF-QfO" firstAttribute="leading" secondItem="442-E8-qXb" secondAttribute="trailing" constant="-367" id="btz-7s-ABS"/>
+                                            <constraint firstItem="c5B-TF-QfO" firstAttribute="leading" secondItem="442-E8-qXb" secondAttribute="trailing" constant="-327" id="btz-7s-ABS"/>
                                             <constraint firstItem="KLO-d1-Ben" firstAttribute="leading" secondItem="K5S-16-vKS" secondAttribute="leading" constant="39" id="fqN-NU-qD3"/>
                                             <constraint firstItem="2xb-dx-VZT" firstAttribute="leading" secondItem="K5S-16-vKS" secondAttribute="leading" constant="47" id="hQn-JD-YI1"/>
                                             <constraint firstAttribute="height" constant="586" id="kaQ-Rl-ybP"/>
@@ -138,6 +139,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginUserTextField" destination="ahL-3J-rs8" id="knq-HA-k5f"/>
                         <outlet property="scrollView" destination="MWv-id-ERi" id="Ktk-Nh-oy7"/>
                         <outlet property="uiButton" destination="2xb-dx-VZT" id="LGI-mE-TIJ"/>
                     </connections>
@@ -168,8 +170,8 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F9Pdnxs-7v5hWoIU9OKdLHQJc5hvlnkN0qHuDo8tA3uEhvuzhulr67_ZuRYiiYrQklvlvIN0" translatesAutoresizingMaskIntoConstraints="NO" id="xM8-bA-xVZ" userLabel="swiftbanner2">
                                                 <rect key="frame" x="0.0" y="-200" width="414" height="953"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в iOS разработку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-Cc-KGe">
-                                                <rect key="frame" x="47" y="39" width="351" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ff-Cc-KGe">
+                                                <rect key="frame" x="131" y="39" width="187" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -192,7 +194,7 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="EvN-1q-N9I" secondAttribute="bottom" id="4Gm-sU-5R6"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Ff-Cc-KGe" secondAttribute="trailing" constant="16" id="4dw-Jy-Rok"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ff-Cc-KGe" secondAttribute="trailing" constant="96" id="4dw-Jy-Rok"/>
                                             <constraint firstItem="EvN-1q-N9I" firstAttribute="centerX" secondItem="lMu-KC-TlL" secondAttribute="centerX" id="6dh-O8-HCv"/>
                                             <constraint firstItem="1Ff-Cc-KGe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lMu-KC-TlL" secondAttribute="leadingMargin" id="Cys-Ff-Kpw"/>
                                             <constraint firstAttribute="trailing" secondItem="xM8-bA-xVZ" secondAttribute="trailing" id="Nhm-Ue-Rwq"/>
@@ -226,6 +228,7 @@
                     </view>
                     <connections>
                         <outlet property="backMainButton" destination="EvN-1q-N9I" id="DYR-N1-vmW"/>
+                        <outlet property="textLabelWelcomeUser" destination="1Ff-Cc-KGe" id="OfK-8c-rh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDj-kB-gUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

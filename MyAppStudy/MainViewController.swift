@@ -8,7 +8,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var text: String?
 
+    @IBOutlet weak var textLabelWelcomeUser: UILabel?
+    
     @IBOutlet var backMainButton: UIButton!
     
  
@@ -19,7 +23,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         backMainButton.layer.cornerRadius = 5
-        // Do any additional setup after loading the view.
+        
+        textLabelWelcomeUser?.text? += text ?? ""
     }
     
 

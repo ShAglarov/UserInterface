@@ -13,9 +13,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet var loginUserTextField: UITextField!
+    
+    
+    @IBAction func tapEntryAccountButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "showVC", sender: self)
+    }
+    
     @IBAction func tapViewExitKeyboard(_ sender: Any) {
         //view.resignFirstResponder()
         scrollView.endEditing(true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MainViewController {
+            vc.text = loginUserTextField.text
+        }
     }
     
     override func viewDidLoad() {
