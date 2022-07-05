@@ -15,19 +15,20 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var loginUserTextField: UITextField!
     
+    @IBOutlet var passwordUserTextField: UITextField!
+    
     
     @IBAction func tapEntryAccountButton(_ sender: UIButton) {
-       
+        if loginUserTextField.text == "0" && passwordUserTextField.text == "0" {
+            performSegue(withIdentifier: "MainScreenPresentationSegue", sender: self)
+        } else {
+            print("Authorization failed")
+        }
     }
     
     @IBAction func tapViewExitKeyboard(_ sender: Any) {
         //view.resignFirstResponder()
         scrollView.endEditing(true)
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? MainViewController {
-            vc.text = loginUserTextField.text
-        }
     }
     
     override func viewDidLoad() {
