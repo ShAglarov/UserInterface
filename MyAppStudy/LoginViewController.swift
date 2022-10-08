@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func tapEntryAccountButton(_ sender: UIButton) {
-        if loginUserTextField.text == "0" && passwordUserTextField.text == "0" {
+        if loginUserTextField.text == "1" && passwordUserTextField.text == "1" {
             performSegue(withIdentifier: "MainScreenPresentationSegue", sender: self)
         } else {
             print("Authorization failed")
